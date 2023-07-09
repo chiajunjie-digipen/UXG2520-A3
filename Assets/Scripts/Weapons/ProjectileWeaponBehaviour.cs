@@ -54,9 +54,54 @@ public class ProjectileWeaponBehaviour : MonoBehaviour
         else if (dir.x < 0 && dir.y < 0) //leftdown facing
         {
             rotation.z = -225f;
-        } 
+        }
+
+
 
         transform.localScale = scale;
         transform.rotation = Quaternion.Euler(rotation); //quaternion /= vector3
+    }
+
+    public void DirectionChecker2(Vector4 dir)
+    {
+        direction = dir;
+
+        float dirx = direction.x;
+        float diry = direction.y;
+
+        Vector3 scale = transform.localScale;
+        Vector4 rotation = transform.rotation.eulerAngles;
+
+        if (dirx < 0 && diry == 0) //left facing
+        {
+            scale.x *= -1;
+            scale.y *= -1;
+        }
+        else if (dirx == 0 && diry < 0) //down facing
+        {
+            rotation.z = -135f;
+        }
+        else if (dir.x == 0 && dir.y > 0) //up facing
+        {
+            rotation.z = 45f;
+        }
+        else if (dir.x > 0 && dir.y > 0) //rightup facing
+        {
+            rotation.z = 0f;
+        }
+        else if (dir.x > 0 && dir.y < 0) //rightdown facing
+        {
+            rotation.z = -90f;
+        }
+        else if (dir.x < 0 && dir.y > 0) //leftup facing
+        {
+            rotation.z = -270f;
+        }
+        else if (dir.x < 0 && dir.y < 0) //leftdown facing
+        {
+            rotation.z = -180f;
+        }
+        transform.localScale = scale;
+        transform.rotation = Quaternion.Euler(rotation);
     }
 }

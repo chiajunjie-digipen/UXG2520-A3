@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SwordAttack : WeaponController
+public class OrbController : WeaponController
 {
+
     // Start is called before the first frame update
     protected override void Start()
     {
@@ -13,8 +14,8 @@ public class SwordAttack : WeaponController
     protected override void Attack()
     {
         base.Attack();
-        GameObject spawnedSpear = Instantiate(prefab);
-        spawnedSpear.transform.position = transform.position;
+        GameObject spawnedOrb = Instantiate(prefab);
+        spawnedOrb.transform.position = transform.position;
+        spawnedOrb.transform.parent = transform; // orb spawns below player and follows them around
     }
-
 }

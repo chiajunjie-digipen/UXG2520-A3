@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Build;
 using UnityEngine;
 
 public class WeaponController : MonoBehaviour
@@ -29,7 +30,7 @@ public class WeaponController : MonoBehaviour
         if(currentCooldown <= 0f)
         {
             Attack();
-        }
+        } 
     }
 
     protected virtual void Attack()
