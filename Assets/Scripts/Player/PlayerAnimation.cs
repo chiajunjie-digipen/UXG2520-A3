@@ -28,4 +28,13 @@ public class PlayerAnimation : MonoBehaviour
             sr.flipX = false;
         }
     }
+
+    void SpriteDirectionChecker() {
+        if (pm.moveDir.x < 0) {
+            sr.flipX = true;
+        } 
+        else {
+            sr.flipX = false;
+        }
+    }
 }
