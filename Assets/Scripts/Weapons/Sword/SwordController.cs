@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ArrowController : WeaponController
+public class SwordController : WeaponController
 {
     // Start is called before the first frame update
     protected override void Start()
@@ -13,8 +13,8 @@ public class ArrowController : WeaponController
     protected override void Attack()
     {
         base.Attack();
-        GameObject spawnedArrow = Instantiate(prefab);
-        spawnedArrow.transform.position = transform.position;
-        spawnedArrow.GetComponent<ArrowBehaviour>().DirectionChecker2(pm.lastMovedVector);
+        GameObject spawnedSword = Instantiate(weaponData.prefab);
+        spawnedSword.transform.position = transform.position;
+        spawnedSword.GetComponent<SwordBehaviour>().DirectionChecker(pm.lastMovedVector);
     }
 }

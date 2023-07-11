@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class ProjectileWeaponBehaviour : MonoBehaviour
 {
-    // base script for projectiles (bow and spear)
+    // base script for projectiles
+    public WeaponScriptableObj weaponData;
 
     protected Vector3 direction;
     public float destroyAfterSeconds;

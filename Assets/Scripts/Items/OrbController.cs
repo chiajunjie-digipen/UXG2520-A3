@@ -14,7 +14,7 @@ public class OrbController : WeaponController
     protected override void Attack()
     {
         base.Attack();
-        GameObject spawnedOrb = Instantiate(prefab);
+        GameObject spawnedOrb = Instantiate(weaponData.prefab);
         spawnedOrb.transform.position = transform.position;
         spawnedOrb.transform.parent = transform; // orb spawns below player and follows them around
     }

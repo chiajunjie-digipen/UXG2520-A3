@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d94272d127ca6ff4f89717c5e04f8a13, type: 3}
+  m_Name: SpearWeapon
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 7162044586116007950, guid: 5ada175ebad7b6f4e80b0b5bd0efacfc, type: 3}
+  damage: 0
+  speed: 1.25
+  cooldownDuration: 1.5
+  pierce: 0

@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SwordController : WeaponController
+public class SpearController : WeaponController
 {
+
     // Start is called before the first frame update
     protected override void Start()
     {
@@ -13,8 +14,8 @@ public class SwordController : WeaponController
     protected override void Attack()
     {
         base.Attack();
-        GameObject spawnedSword = Instantiate(prefab);
-        spawnedSword.transform.position = transform.position;
-        spawnedSword.GetComponent<SwordBehaviour>().DirectionChecker(pm.lastMovedVector);
+        GameObject spawnedSpear = Instantiate(weaponData.prefab);
+        spawnedSpear.transform.position = transform.position;
+        spawnedSpear.GetComponent<SpearBehaviour>().DirectionChecker(pm.lastMovedVector);
     }
 }
