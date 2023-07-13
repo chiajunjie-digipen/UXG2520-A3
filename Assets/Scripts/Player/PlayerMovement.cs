@@ -6,6 +6,8 @@ using UnityEngine.Rendering;
 public class PlayerMovement : MonoBehaviour
 {
     //Movement
+    public int level = 1;
+    public LevelGetter lg;
     public float moveSpeed;
     Rigidbody2D rb;
     public float lastHorizontalVector;
@@ -17,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        lg = GetComponent<LevelGetter>();
         lastMovedVector = new Vector2(1, 0f);
     }
 
@@ -28,6 +31,7 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+        moveSpeed = (int)lg.levelProperties[level]["playerMoveSpd"];
         Move();
     }
 
