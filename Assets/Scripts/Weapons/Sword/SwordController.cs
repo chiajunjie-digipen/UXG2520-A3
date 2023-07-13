@@ -13,7 +13,7 @@ public class SwordController : WeaponController
     protected override void Attack()
     {
         base.Attack();
-        GameObject spawnedSword = Instantiate(weaponData.prefab);
+        GameObject spawnedSword = Instantiate(weaponData.Prefab);
         spawnedSword.transform.position = transform.position;
         spawnedSword.GetComponent<SwordBehaviour>().DirectionChecker(pm.lastMovedVector);
     }

@@ -14,7 +14,7 @@ public class SpearController : WeaponController
     protected override void Attack()
     {
         base.Attack();
-        GameObject spawnedSpear = Instantiate(weaponData.prefab);
+        GameObject spawnedSpear = Instantiate(weaponData.Prefab);
         spawnedSpear.transform.position = transform.position;
         spawnedSpear.GetComponent<SpearBehaviour>().DirectionChecker(pm.lastMovedVector);
     }

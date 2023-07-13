@@ -12,8 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94272d127ca6ff4f89717c5e04f8a13, type: 3}
   m_Name: ArrowBowWeapon
   m_EditorClassIdentifier: 
-  prefab: {fileID: 6911322817579677659, guid: ad14578f18a616e46b0506d2f2ebbaec, type: 3}
-  damage: 0
-  speed: 1.5
-  cooldownDuration: 1
-  pierce: 0
+  prefab: {fileID: 3755687465953063899, guid: f2b3b265e1a7c9b41a85f536099c8027, type: 3}

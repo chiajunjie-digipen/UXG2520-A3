@@ -13,7 +13,7 @@ public class ArrowController : WeaponController
     protected override void Attack()
     {
         base.Attack();
-        GameObject spawnedArrow = Instantiate(weaponData.prefab);
+        GameObject spawnedArrow = Instantiate(weaponData.Prefab);
         spawnedArrow.transform.position = transform.position;
         spawnedArrow.GetComponent<ArrowBehaviour>().DirectionChecker2(pm.lastMovedVector);
     }
