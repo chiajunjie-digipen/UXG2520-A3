@@ -13,3 +13,7 @@ MonoBehaviour:
   m_Name: SwordWeapon
   m_EditorClassIdentifier: 
   prefab: {fileID: 5619600225999914649, guid: e94e4425e874a2444ac8f4d16d35073d, type: 3}
+  damage: 1
+  speed: 0.5
+  cooldownDuration: 1
+  pierce: 0

@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d94272d127ca6ff4f89717c5e04f8a13, type: 3}
-  m_Name: ArrowBowWeapon
+  m_Name: OrbWeapon
   m_EditorClassIdentifier: 
-  prefab: {fileID: 3755687465953063899, guid: f2b3b265e1a7c9b41a85f536099c8027, type: 3}
+  prefab: {fileID: 6819926786647470075, guid: 883502176bd74c547bf31404d63bb009, type: 3}
   damage: 1
-  speed: 1
-  cooldownDuration: 2
+  speed: 0
+  cooldownDuration: 1
   pierce: 0
