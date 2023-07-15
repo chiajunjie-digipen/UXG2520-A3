@@ -31,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        moveSpeed = (int)lg.levelProperties[level]["playerMoveSpd"];
+        moveSpeed = lg.levelProperties[level]["playerMoveSpd"];
         Move();
     }
 
