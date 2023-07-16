@@ -9,8 +9,8 @@ public class EnemyStats : MonoBehaviour
 
     //current stats
     public float currentMoveSpeed;
-    float currentHealth;
-    float currentDamage;
+    public float currentHealth;
+    public float currentDamage;
     public int enemyId;
     List<string> properties = new List<string>();
 
