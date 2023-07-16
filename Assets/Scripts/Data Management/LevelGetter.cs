@@ -31,12 +31,12 @@ public class LevelGetter : MonoBehaviour
             data = reader.ReadLine();
         }
         reader.Close();
-        foreach(KeyValuePair<int, Dictionary<string, float>> attributes in levelProperties) {
+        /*foreach(KeyValuePair<int, Dictionary<string, float>> attributes in levelProperties) {
             Debug.Log(attributes.Key);
             foreach(KeyValuePair<string, float> attribute in attributes.Value) {
                 Debug.Log(attribute.Key + " " + attribute.Value);
             }
-        }
+        }*/
     }
 
     // Update is called once per frame

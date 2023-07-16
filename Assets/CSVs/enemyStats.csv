@@ -1,6 +1,6 @@
-enemy_id,enemyAtk,enemyMoveSpd,enemyHP,XPdrop,spawnPoint,spawnAmt
-1,5,0.5,15,10,,
-2,12,0.7,30,25,,
-3,16,0.8,55,40,,
-4,20,0.9,72,80,,
-5,25,1.2,180,115,,
+enemy_id,enemyAtk,enemyMoveSpd,enemyHP,XPdrop
+1,5,0.5,15,10
+2,12,0.7,30,25
+3,16,0.8,55,40
+4,20,0.9,72,80
+5,25,1.2,180,115

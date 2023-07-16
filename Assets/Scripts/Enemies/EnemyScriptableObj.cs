@@ -6,7 +6,7 @@ using UnityEngine;
 public class EnemyScriptableObj : ScriptableObject
 {
     //base stats for enemies
-    [SerializeField]
+    /*[SerializeField]
     float moveSpeed;
     public float MoveSpeed { get => moveSpeed; private set => moveSpeed = value; }
 
@@ -17,4 +17,14 @@ public class EnemyScriptableObj : ScriptableObject
     [SerializeField]
     float damage;
     public float Damage { get => damage; private set => damage = value; }
+
+    [SerializeField]
+    float enemy_xp;
+    public float Exp { get => enemy_xp; private set => enemy_xp = value; }*/
+
+    //csv stores data now
+
+    [SerializeField]
+    int enemy_id;
+    public int enemyid { get => enemy_id; private set => enemy_id = value; }
 }
