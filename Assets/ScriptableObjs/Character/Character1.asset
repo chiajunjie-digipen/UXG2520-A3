@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd7f4fb29d006574484b81200a2b0663, type: 3}
+  m_Name: Character1
+  m_EditorClassIdentifier: 
+  startingWeapon: {fileID: 5619600225999914649, guid: e94e4425e874a2444ac8f4d16d35073d, type: 3}
+  maxHealth: 420
+  recovery: 69
+  moveSpeed: 2

@@ -9,11 +9,14 @@ public class PlayerMovement : MonoBehaviour
     public int level = 1;
     public LevelGetter lg;
     public float moveSpeed;
-    Rigidbody2D rb;
     public float lastHorizontalVector;
     public float lastVerticalVector;
     public Vector2 moveDir;
     public Vector2 lastMovedVector;
+
+    //refs
+    Rigidbody2D rb;
+    public CharacterScriptableObj characterData;
 
     // Start is called before the first frame update
     void Start()
@@ -62,6 +65,6 @@ public class PlayerMovement : MonoBehaviour
 
     void Move()
     {
-        rb.velocity = moveDir * moveSpeed;
+        rb.velocity = moveDir * characterData.MoveSpeed;
     }
 }
