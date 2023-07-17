@@ -587,6 +587,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterData: {fileID: 11400000, guid: ca5461e7867769c4cafa9ef5ef9947ff, type: 2}
+  invincibilityDuration: 0.5
 --- !u!1 &2006644803
 GameObject:
   m_ObjectHideFlags: 0
