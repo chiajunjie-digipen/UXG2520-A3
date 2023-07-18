@@ -13,12 +13,6 @@ public class EnemyMovement : MonoBehaviour
         player = FindObjectOfType<PlayerMovement>().transform;
         enemyData = GetComponent<EnemyStats>();
         enemyId = enemyData.enemyId;
-        foreach(KeyValuePair<int, Dictionary<string, float>> attributes in enemyData.enemyProperties) {
-            Debug.Log(attributes.Key);
-            foreach(KeyValuePair<string, float> attribute in attributes.Value) {
-                Debug.Log(attribute.Key + " " + attribute.Value);
-            }
-        }
     }
 
     // Update is called once per frame

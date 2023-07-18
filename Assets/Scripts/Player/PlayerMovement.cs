@@ -6,8 +6,6 @@ using UnityEngine.Rendering;
 public class PlayerMovement : MonoBehaviour
 {
     //Movement
-    public int level = 1;
-    public LevelGetter lg;
     public float moveSpeed;
     public float lastHorizontalVector;
     public float lastVerticalVector;
@@ -16,13 +14,13 @@ public class PlayerMovement : MonoBehaviour
 
     //refs
     Rigidbody2D rb;
-    public CharacterScriptableObj characterData;
+    PlayerStats ps;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        lg = GetComponent<LevelGetter>();
+        ps = GetComponent<PlayerStats>();
         lastMovedVector = new Vector2(1, 0f);
     }
 
@@ -34,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        moveSpeed = lg.levelProperties[level]["playerMoveSpd"];
+        moveSpeed = ps.currentMoveSpeed;
         Move();
     }
 
@@ -65,6 +63,6 @@ public class PlayerMovement : MonoBehaviour
 
     void Move()
     {
-        rb.velocity = moveDir * characterData.MoveSpeed;
+        rb.velocity = moveDir * moveSpeed;
     }
 }

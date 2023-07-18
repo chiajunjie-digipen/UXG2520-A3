@@ -1,21 +1,48 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
 
 public class PlayerStats : MonoBehaviour
 {
     public CharacterScriptableObj characterData;
 
     //current stats
-    float currentHealth;
-    float currentRecovery;
-    float currentMoveSpeed;
+    [SerializeField] float currentHealth;
+    [SerializeField] float currentRecovery;
+    public float currentMoveSpeed;
 
+    private string data = "";
+    public Dictionary<int, Dictionary<string, string>> playerProperties = new Dictionary<int, Dictionary<string, string>>();
+    List<string> properties = new List<string>();
     private void Awake()
     {
-        currentHealth = characterData.MaxHealth;
-        currentRecovery = characterData.Recovery;
-        currentMoveSpeed = characterData.MoveSpeed;
+        StreamReader reader = new StreamReader("Assets/CSVs/levels.csv");
+        properties = new List<string>(reader.ReadLine().Split(','));
+        
+
+        data = reader.ReadLine();
+        
+        while(data != null) {
+            List<string> dataList = new List<string>(data.Split(','));
+            playerProperties.Add(int.Parse(dataList[0]), new Dictionary<string, string>());
+            int counter = 0;
+            foreach(string property in properties) {
+                playerProperties[int.Parse(dataList[0])].Add(property, dataList[counter]);
+                Debug.Log(property + " " + dataList[counter]);
+                counter++;
+            }
+            data = reader.ReadLine();
+        }
+        reader.Close();
+        //levels start at 1
+        currentHealth = float.Parse(playerProperties[1]["playerHP"]);
+        Debug.Log(currentHealth);
+        currentRecovery = float.Parse(playerProperties[1]["recovery"]);
+        Debug.Log(currentRecovery);
+        currentMoveSpeed = float.Parse(playerProperties[1]["playerMoveSpd"]);
+        Debug.Log(currentMoveSpeed);
+
     }
 
     void Update()

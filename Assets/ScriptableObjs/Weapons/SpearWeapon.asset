@@ -17,3 +17,4 @@ MonoBehaviour:
   cooldownDuration: 1.5
   pierce: 0
   weapon_id: 3
+  prefab: {fileID: 2975958434921799670, guid: fe1a2999bf1081640acfef9972ea6ec2, type: 3}
