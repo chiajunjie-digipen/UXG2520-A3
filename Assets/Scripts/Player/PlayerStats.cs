@@ -84,4 +84,18 @@ public class PlayerStats : MonoBehaviour
     public float invincibilityDuration;
     float invincibilityTimer;
     bool isInvincible;
+
+    public void RestoreHealth (float amount)
+    {
+        // heal when hp is less than max hp
+        if (currentHealth < characterData.MaxHealth)
+        {
+            currentHealth += amount;
+
+            if (currentHealth > characterData.MaxHealth) // makes sure player hp does not exceed max hp
+            {
+                currentHealth = characterData.MaxHealth;
+            }
+        }
+    }
 }
