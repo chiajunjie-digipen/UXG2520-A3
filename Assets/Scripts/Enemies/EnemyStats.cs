@@ -16,7 +16,7 @@ public class EnemyStats : MonoBehaviour
 
     private string data = "";
     public Dictionary<int, Dictionary<string, float>> enemyProperties = new Dictionary<int, Dictionary<string, float>>();
-    public float XPdrop;
+    public int XPdrop;
 
     void Awake()
     {
@@ -46,7 +46,7 @@ public class EnemyStats : MonoBehaviour
         currentMoveSpeed = enemyProperties[enemyId]["enemyMoveSpd"];
         currentHealth = enemyProperties[enemyId]["enemyHP"];
         currentDamage = enemyProperties[enemyId]["enemyAtk"];
-        XPdrop = enemyProperties[enemyId]["XPdrop"];
+        XPdrop = (int)enemyProperties[enemyId]["XPdrop"]; // i did a wucky mucky and declared all of these mfs floats and so now i atone for my mistake
 
 
 
@@ -64,6 +64,8 @@ public class EnemyStats : MonoBehaviour
 
     public void Kill()
     {
+        PlayerStats player = GameObject.Find("Player").GetComponent<PlayerStats>();
+        player.XpUp(XPdrop);
         Destroy(gameObject);
     }
 

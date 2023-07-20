@@ -11,7 +11,12 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] float currentRecovery;
     public float currentMoveSpeed;
 
-    float maxHealth;
+    //THE PART WITH LEVELS BABYYYYY
+    [SerializeField] int xp;
+    [SerializeField] int currentXPThreshold;
+    [SerializeField] int currentLevel;
+
+    [SerializeField] float maxHealth;
 
     private string data = "";
     public Dictionary<int, Dictionary<string, string>> playerProperties = new Dictionary<int, Dictionary<string, string>>();
@@ -37,8 +42,11 @@ public class PlayerStats : MonoBehaviour
         }
         reader.Close();
 
+        currentLevel = 1;
+
         //levels start at 1
         currentHealth = float.Parse(playerProperties[1]["playerHP"]);
+        
 
         //maxHealth set
         maxHealth = float.Parse(playerProperties[1]["playerHP"]);
@@ -47,6 +55,8 @@ public class PlayerStats : MonoBehaviour
 
         currentMoveSpeed = float.Parse(playerProperties[1]["playerMoveSpd"]);
 
+        //level is set for next
+        currentXPThreshold = int.Parse(playerProperties[2]["expRequired"]);
 
     }
 
@@ -103,4 +113,21 @@ public class PlayerStats : MonoBehaviour
             }
         }
     }
-}
+
+    public void XpUp (int amount) { // doubles as level up code
+        xp += amount;
+        if (xp >= currentXPThreshold) {
+            currentLevel += 1;
+            xp = 0;
+            currentXPThreshold = int.Parse(playerProperties[currentLevel+1]["expRequired"]);
+
+            maxHealth = float.Parse(playerProperties[currentLevel+1]["playerHP"]);
+
+            currentRecovery = float.Parse(playerProperties[currentLevel]["recovery"]);
+
+            currentMoveSpeed = float.Parse(playerProperties[currentLevel]["playerMoveSpd"]);
+        }
+    }
+
+
+ }
