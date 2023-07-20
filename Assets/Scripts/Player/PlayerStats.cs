@@ -112,6 +112,8 @@ public class PlayerStats : MonoBehaviour
                 currentHealth = maxHealth;
             }
         }
+
+
     }
 
     public void XpUp (int amount) { // doubles as level up code
@@ -129,5 +131,21 @@ public class PlayerStats : MonoBehaviour
         }
     }
 
+    public void Invincible(float duration)
+    {
+        if (!isInvincible) //if not invincible, make invincible and set timer to duration
+        {
+            isInvincible = true;
+            invincibilityTimer = duration;
 
- }
+            if (invincibilityTimer > 0) //timer countdown for invincibility
+            {
+                invincibilityTimer -= Time.deltaTime;
+            }
+            else if (isInvincible)
+            {
+                isInvincible = false;
+            }
+        }
+    }
+}
