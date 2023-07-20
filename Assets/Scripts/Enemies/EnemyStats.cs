@@ -16,7 +16,7 @@ public class EnemyStats : MonoBehaviour
 
     private string data = "";
     public Dictionary<int, Dictionary<string, float>> enemyProperties = new Dictionary<int, Dictionary<string, float>>();
-    float XPdrop;
+    public float XPdrop;
 
     void Awake()
     {
@@ -42,9 +42,11 @@ public class EnemyStats : MonoBehaviour
         }
         reader.Close();
 
+        //Assigns Enemy Stats
         currentMoveSpeed = enemyProperties[enemyId]["enemyMoveSpd"];
         currentHealth = enemyProperties[enemyId]["enemyHP"];
         currentDamage = enemyProperties[enemyId]["enemyAtk"];
+        XPdrop = enemyProperties[enemyId]["XPdrop"];
 
 
 

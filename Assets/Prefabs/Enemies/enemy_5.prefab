@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4607717871304318145}
   - component: {fileID: -2050800069935021060}
   - component: {fileID: 2768647207161697516}
+  - component: {fileID: 6766717647820137084}
   m_Layer: 0
   m_Name: enemy_5
   m_TagString: Enemy
@@ -125,7 +126,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 102f28c47cabc0746b8fc64bc5fac089, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyData: {fileID: 11400000, guid: 514a6d396b52abc4a924c17ce0c07d75, type: 2}
+  enemyData: {fileID: 0}
+  enemyId: 0
 --- !u!114 &2768647207161697516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,3 +141,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyData: {fileID: 11400000, guid: 514a6d396b52abc4a924c17ce0c07d75, type: 2}
+  currentMoveSpeed: 0
+  currentHealth: 0
+  currentDamage: 0
+  enemyId: 0
+--- !u!114 &6766717647820137084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7648174781549248952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14f0fc265a6a24345bce4e1dee9d972c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drops:
+  - name: Health Pot
+    itemPrefab: {fileID: 5000879426723265262, guid: 12b19fd70b22fba4883a5e6717f69e62, type: 3}
+    dropRate: 30

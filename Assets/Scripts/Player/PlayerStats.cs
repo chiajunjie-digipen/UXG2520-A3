@@ -5,12 +5,13 @@ using System.IO;
 
 public class PlayerStats : MonoBehaviour
 {
-    public CharacterScriptableObj characterData;
 
     //current stats
     [SerializeField] float currentHealth;
     [SerializeField] float currentRecovery;
     public float currentMoveSpeed;
+
+    float maxHealth;
 
     private string data = "";
     public Dictionary<int, Dictionary<string, string>> playerProperties = new Dictionary<int, Dictionary<string, string>>();
@@ -35,13 +36,17 @@ public class PlayerStats : MonoBehaviour
             data = reader.ReadLine();
         }
         reader.Close();
+
         //levels start at 1
         currentHealth = float.Parse(playerProperties[1]["playerHP"]);
-        Debug.Log(currentHealth);
+
+        //maxHealth set
+        maxHealth = float.Parse(playerProperties[1]["playerHP"]);
+
         currentRecovery = float.Parse(playerProperties[1]["recovery"]);
-        Debug.Log(currentRecovery);
+
         currentMoveSpeed = float.Parse(playerProperties[1]["playerMoveSpd"]);
-        Debug.Log(currentMoveSpeed);
+
 
     }
 
@@ -88,13 +93,13 @@ public class PlayerStats : MonoBehaviour
     public void RestoreHealth (float amount)
     {
         // heal when hp is less than max hp
-        if (currentHealth < characterData.MaxHealth)
+        if (currentHealth < maxHealth)
         {
             currentHealth += amount;
 
-            if (currentHealth > characterData.MaxHealth) // makes sure player hp does not exceed max hp
+            if (currentHealth > maxHealth) // makes sure player hp does not exceed max hp
             {
-                currentHealth = characterData.MaxHealth;
+                currentHealth = maxHealth;
             }
         }
     }

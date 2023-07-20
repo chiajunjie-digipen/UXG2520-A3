@@ -569,7 +569,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf1cce1faca0a3847aefef26cf760da7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterData: {fileID: 11400000, guid: ca5461e7867769c4cafa9ef5ef9947ff, type: 2}
   currentHealth: 0
   currentRecovery: 0
   currentMoveSpeed: 0
@@ -776,27 +775,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55702a59ea0134648af6597e6710e3a1, type: 3}
---- !u!1 &216146883465176416 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7752378398696361978, guid: 55702a59ea0134648af6597e6710e3a1, type: 3}
-  m_PrefabInstance: {fileID: 216146883465176415}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &216146883465176417
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 216146883465176416}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14f0fc265a6a24345bce4e1dee9d972c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  drops:
-  - name: Health Pot
-    itemPrefab: {fileID: 5000879426723265262, guid: 12b19fd70b22fba4883a5e6717f69e62, type: 3}
-    dropRate: 30
 --- !u!1001 &419605480949768309
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -854,27 +832,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bdcba41ae12972843b72a30248c929e0, type: 3}
---- !u!1 &419605480949768310 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7648174781549248952, guid: bdcba41ae12972843b72a30248c929e0, type: 3}
-  m_PrefabInstance: {fileID: 419605480949768309}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &419605480949768311
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 419605480949768310}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14f0fc265a6a24345bce4e1dee9d972c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  drops:
-  - name: Health Pot
-    itemPrefab: {fileID: 5000879426723265262, guid: 12b19fd70b22fba4883a5e6717f69e62, type: 3}
-    dropRate: 30
 --- !u!1001 &1337112305673455778
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -932,27 +889,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3e93f8f5a228ab47a82a29536e4a730, type: 3}
---- !u!1 &1337112305673455779 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7609935619562798372, guid: f3e93f8f5a228ab47a82a29536e4a730, type: 3}
-  m_PrefabInstance: {fileID: 1337112305673455778}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1337112305673455780
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1337112305673455779}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14f0fc265a6a24345bce4e1dee9d972c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  drops:
-  - name: Health Pot
-    itemPrefab: {fileID: 5000879426723265262, guid: 12b19fd70b22fba4883a5e6717f69e62, type: 3}
-    dropRate: 30
 --- !u!1001 &2544105235371139817
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1010,27 +946,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39ecae6346fc23e47b965daf89d43320, type: 3}
---- !u!1 &2544105235371139818 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7572788514024987449, guid: 39ecae6346fc23e47b965daf89d43320, type: 3}
-  m_PrefabInstance: {fileID: 2544105235371139817}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2544105235371139819
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2544105235371139818}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14f0fc265a6a24345bce4e1dee9d972c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  drops:
-  - name: Health Pot
-    itemPrefab: {fileID: 5000879426723265262, guid: 12b19fd70b22fba4883a5e6717f69e62, type: 3}
-    dropRate: 30
 --- !u!1001 &5468068691453165057
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1088,24 +1003,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e09f35526b0209e4bb9eb95caada55ce, type: 3}
---- !u!1 &5468068691453165058 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5337322890831615087, guid: e09f35526b0209e4bb9eb95caada55ce, type: 3}
-  m_PrefabInstance: {fileID: 5468068691453165057}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &5468068691453165059
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5468068691453165058}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14f0fc265a6a24345bce4e1dee9d972c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  drops:
-  - name: Health Pot
-    itemPrefab: {fileID: 5000879426723265262, guid: 12b19fd70b22fba4883a5e6717f69e62, type: 3}
-    dropRate: 30

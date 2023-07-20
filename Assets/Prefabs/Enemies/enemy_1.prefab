@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7888636231336200872}
   - component: {fileID: -9047132111908252263}
   - component: {fileID: -2280055573503035068}
+  - component: {fileID: 1007952876211051107}
   m_Layer: 0
   m_Name: enemy_1
   m_TagString: Enemy
@@ -140,4 +141,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyData: {fileID: 11400000, guid: 3b4f06b4023e679429130340e3bb2eae, type: 2}
+  currentMoveSpeed: 0
+  currentHealth: 0
+  currentDamage: 0
   enemyId: 0
+--- !u!114 &1007952876211051107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7572788514024987449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14f0fc265a6a24345bce4e1dee9d972c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drops:
+  - name: Health Pot
+    itemPrefab: {fileID: 5000879426723265262, guid: 12b19fd70b22fba4883a5e6717f69e62, type: 3}
+    dropRate: 30
