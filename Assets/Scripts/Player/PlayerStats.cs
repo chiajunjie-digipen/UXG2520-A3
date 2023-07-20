@@ -72,7 +72,7 @@ public class PlayerStats : MonoBehaviour
         }
     }
 
-    public void TakeDamage(float dmg)
+    public void TakeDamage(float dmg) //how the player gets beat tf up
     {
         if (!isInvincible)
         {
@@ -100,7 +100,7 @@ public class PlayerStats : MonoBehaviour
     float invincibilityTimer;
     bool isInvincible;
 
-    public void RestoreHealth (float amount)
+    public void RestoreHealth (float amount) //for hp pot
     {
         // heal when hp is less than max hp
         if (currentHealth < maxHealth)
@@ -131,7 +131,7 @@ public class PlayerStats : MonoBehaviour
         }
     }
 
-    public void Invincible(float duration)
+    public void Invincible(float duration) //for immune pot
     {
         if (!isInvincible) //if not invincible, make invincible and set timer to duration
         {

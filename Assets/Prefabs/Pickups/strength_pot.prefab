@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2346965087656851716}
   - component: {fileID: 4697650006411764552}
   - component: {fileID: 1239108831870827992}
+  - component: {fileID: -6550619146123295980}
   m_Layer: 0
   m_Name: strength_pot
   m_TagString: Untagged
@@ -71,8 +72,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -277480327
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b9b7c6a6f31312544af343b546e1d1cb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -95,7 +96,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -111,3 +112,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &-6550619146123295980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7227002273178758071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dafa25539c4ec5a4fb750514c153ebc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  strengthMultiplier: 2

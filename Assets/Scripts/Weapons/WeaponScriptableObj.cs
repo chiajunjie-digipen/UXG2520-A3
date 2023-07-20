@@ -58,4 +58,5 @@ public class WeaponScriptableObj : ScriptableObject
         Speed = float.Parse(weaponProperties[weapon_id]["weaponAtkSpd"]);
         CooldownDuration = float.Parse(weaponProperties[weapon_id]["cooldown"]);
     }
+
 }

@@ -18,6 +18,9 @@ public class EnemyStats : MonoBehaviour
     public Dictionary<int, Dictionary<string, float>> enemyProperties = new Dictionary<int, Dictionary<string, float>>();
     public int XPdrop;
 
+    public float despawnDistance = 20f;
+    Transform player;
+
     void Awake()
     {
         /*currentMoveSpeed = enemyData.MoveSpeed;
@@ -25,16 +28,16 @@ public class EnemyStats : MonoBehaviour
         currentDamage = enemyData.Damage;*/
 
         enemyId = enemyData.enemyid;
-        
+
         StreamReader reader = new StreamReader("Assets/CSVs/enemyStats.csv");
         properties = new List<string>(reader.ReadLine().Split(','));
 
         data = reader.ReadLine();
-        while(data != null) {
+        while (data != null) {
             List<string> dataList = new List<string>(data.Split(','));
             enemyProperties.Add(int.Parse(dataList[0]), new Dictionary<string, float>());
             int counter = 0;
-            foreach(string property in properties) {
+            foreach (string property in properties) {
                 enemyProperties[int.Parse(dataList[0])].Add(property, float.Parse(dataList[counter]));
                 counter++;
             }
@@ -52,11 +55,24 @@ public class EnemyStats : MonoBehaviour
 
     }
 
+    void Start()
+    {
+        player = FindObjectOfType<PlayerStats>().transform;
+    }
+
+    void Update()
+    {
+        if (Vector2.Distance(transform.position, player.position) >= despawnDistance)
+        {
+            ReturnEnemy();
+        }
+    }
+
     public void TakeDamage(float dmg)
     {
         currentHealth -= dmg;
 
-        if(currentHealth <= 0)
+        if (currentHealth <= 0)
         {
             Kill();
         }
@@ -73,5 +89,17 @@ public class EnemyStats : MonoBehaviour
     {
         PlayerStats player = col.gameObject.GetComponent<PlayerStats>();
         player.TakeDamage(currentDamage);
+    }
+
+    private void OnDestroy()
+    {
+        EnemySpawner es = FindObjectOfType<EnemySpawner>();
+        es.OnEnemyKilled();
+    }
+
+    void ReturnEnemy()
+    {
+        EnemySpawner es = FindObjectOfType<EnemySpawner>();
+        transform.position = player.position + es.relativeSpawnPoints[Random.Range(0, es.relativeSpawnPoints.Count)].position;
     }
 }
