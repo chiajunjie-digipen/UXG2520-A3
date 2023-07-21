@@ -6,6 +6,7 @@ public class StrengthPot : MonoBehaviour, ICollectible
 {
     public void Collect()
     {
-        
+        MultiplierHandler multiplier = FindObjectOfType<MultiplierHandler>();
+        Destroy(gameObject);
     }
 }

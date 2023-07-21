@@ -4,15 +4,16 @@ using UnityEngine;
 using UnityEngine.AddressableAssets;
 using System.IO;
 
-public class MultiplerHandler : MonoBehaviour
+public class MultiplierHandler : MonoBehaviour
 {
     // Start is called before the first frame update
     private string data = "";
     public Dictionary<int, Dictionary<string, string>> multiplierProperties = new Dictionary<int, Dictionary<string, string>>();
     List<string> properties = new List<string>();
+    int level;
     void Start()
     {
-        StreamReader reader = new StreamReader("Assets/CSVs/levels.csv");
+        StreamReader reader = new StreamReader("Assets/CSVs/multipliers.csv");
         properties = new List<string>(reader.ReadLine().Split(','));
         data = reader.ReadLine();
         
@@ -28,7 +29,6 @@ public class MultiplerHandler : MonoBehaviour
             data = reader.ReadLine();
         }
         reader.Close(); 
-
         
     }
 

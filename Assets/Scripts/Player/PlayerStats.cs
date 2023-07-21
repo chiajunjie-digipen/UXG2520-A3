@@ -14,7 +14,7 @@ public class PlayerStats : MonoBehaviour
     //THE PART WITH LEVELS BABYYYYY
     [SerializeField] int xp;
     [SerializeField] int currentXPThreshold;
-    [SerializeField] int currentLevel;
+    public int currentLevel;
 
     [SerializeField] float maxHealth;
 

@@ -18,10 +18,16 @@ public class ProjectileWeaponBehaviour : MonoBehaviour
 
     void Awake()
     {
-        currentDamage = weaponData.Damage;
+        currentDamage = weaponData.Damage  * 
+        float.Parse(GameObject.Find("Scaling").GetComponent<MultiplierHandler>().
+        multiplierProperties[GameObject.Find("Player").
+        GetComponent<PlayerStats>().
+        currentLevel]["damageMultiplier"]);
+        
         currentSpeed = weaponData.Speed;
         currentCooldownDuration = weaponData.CooldownDuration;
         currentPierce = weaponData.Pierce;
+
     }
 
 
