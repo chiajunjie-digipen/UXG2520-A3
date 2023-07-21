@@ -13,7 +13,7 @@ public class MultiplierHandler : MonoBehaviour
     int level;
     void Start()
     {
-        StreamReader reader = new StreamReader("Assets/CSVs/multipliers.csv");
+        StreamReader reader = new StreamReader("Assets/CSVs/levels.csv");
         properties = new List<string>(reader.ReadLine().Split(','));
         data = reader.ReadLine();
         
