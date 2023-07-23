@@ -18,11 +18,14 @@ public class ProjectileWeaponBehaviour : MonoBehaviour
 
     void Awake()
     {
-        currentDamage = weaponData.Damage  * 
+        PlayerStats ps = FindObjectOfType<PlayerStats>(); // there is only one player and this is technically spaghetti code i hate myself too
+        currentDamage = weaponData.Damage * 
         float.Parse(GameObject.Find("Scaling").GetComponent<MultiplierHandler>().
-        multiplierProperties[GameObject.Find("Player").
-        GetComponent<PlayerStats>().
-        currentLevel]["damageMultiplier"]);
+        multiplierProperties[ps.currentLevel]["damageMultiplier"]); // multiplies damage by level
+        
+        if (ps.isStrengthened){
+            currentDamage *= float.Parse(GameObject.Find("Scaling").GetComponent<MultiplierHandler>().multiplierProperties[ps.currentLevel]["strengthenPotionMultiplier"]);
+        }
         
         currentSpeed = weaponData.Speed;
         currentCooldownDuration = weaponData.CooldownDuration;

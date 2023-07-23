@@ -23,6 +23,7 @@ public class PlayerStats : MonoBehaviour
     public Dictionary<int, Dictionary<string, string>> playerProperties = new Dictionary<int, Dictionary<string, string>>();
     List<string> properties = new List<string>();
     [SerializeField] bool gameOver;
+
     private void Awake()
     {
         StreamReader reader = new StreamReader("Assets/CSVs/levels.csv");
@@ -73,6 +74,15 @@ public class PlayerStats : MonoBehaviour
         {
             isInvincible = false;
         }
+
+        if (strengthenTimer > 0) //timer countdown for strengthening
+        {
+            strengthenTimer -= Time.deltaTime;
+        }
+        else if (isStrengthened)
+        {
+            isStrengthened = false;
+        }
     }
 
     public void TakeDamage(float dmg) //how the player gets beat tf up
@@ -110,6 +120,11 @@ public class PlayerStats : MonoBehaviour
     public float invincibilityDuration;
     float invincibilityTimer;
     bool isInvincible;
+
+    [Header("Strengthening")]
+    public float strengthenDuration;
+    [SerializeField] float strengthenTimer;
+    public bool isStrengthened;
 
     public void RestoreHealth (float amount) //for hp pot
     {
@@ -149,15 +164,15 @@ public class PlayerStats : MonoBehaviour
         {
             isInvincible = true;
             invincibilityTimer = duration;
+        }
+    }
 
-            if (invincibilityTimer > 0) //timer countdown for invincibility
-            {
-                invincibilityTimer -= Time.deltaTime;
-            }
-            else if (isInvincible)
-            {
-                isInvincible = false;
-            }
+    public void Strengthen(float duration) //for strengthening pot
+    {
+        if (!isStrengthened) //if not strengthened, make strengthened and set timer to duration
+        {
+            isStrengthened = true;
+            strengthenTimer = duration;
         }
     }
 }

@@ -6,7 +6,8 @@ public class StrengthPot : MonoBehaviour, ICollectible
 {
     public void Collect()
     {
-        MultiplierHandler multiplier = FindObjectOfType<MultiplierHandler>();
+        PlayerStats ps = FindObjectOfType<PlayerStats>();
+        ps.Strengthen(float.Parse(FindObjectOfType<MultiplierHandler>().multiplierProperties[ps.currentLevel]["strengthenDuration"]));
         Destroy(gameObject);
     }
 }
