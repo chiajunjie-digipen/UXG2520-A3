@@ -13,6 +13,7 @@ public class PlayerStats : MonoBehaviour
 
     //THE PART WITH LEVELS BABYYYYY
     [SerializeField] int xp;
+    [SerializeField] int totalXpWithoutLevelReset;
     [SerializeField] int currentXPThreshold;
     public int currentLevel;
 
@@ -91,6 +92,10 @@ public class PlayerStats : MonoBehaviour
 
     public void Kill()
     {
+        AnalyticsTracker at = GameObject.FindObjectOfType<AnalyticsTracker>();
+        at.xpGained = totalXpWithoutLevelReset;
+        at.counting = false;
+        at.WriteData();
         Debug.Log("Game Over");
     }
 
@@ -118,6 +123,7 @@ public class PlayerStats : MonoBehaviour
 
     public void XpUp (int amount) { // doubles as level up code
         xp += amount;
+        totalXpWithoutLevelReset += amount; // whole new variable so i dont need to calculate whenever xp resets to zero. my life is a joke
         if (xp >= currentXPThreshold) {
             currentLevel += 1;
             xp = 0;
