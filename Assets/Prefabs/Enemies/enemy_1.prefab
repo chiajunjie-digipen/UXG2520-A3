@@ -145,6 +145,8 @@ MonoBehaviour:
   currentHealth: 0
   currentDamage: 0
   enemyId: 0
+  XPdrop: 0
+  despawnDistance: 20
 --- !u!114 &1007952876211051107
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,3 +163,9 @@ MonoBehaviour:
   - name: Health Pot
     itemPrefab: {fileID: 5000879426723265262, guid: 12b19fd70b22fba4883a5e6717f69e62, type: 3}
     dropRate: 30
+  - name: Immune Pot
+    itemPrefab: {fileID: 4322496617207527138, guid: cad1b17dd6d14d443aa6bfe06b74dab9, type: 3}
+    dropRate: 15
+  - name: Strength Pot
+    itemPrefab: {fileID: 7227002273178758071, guid: edc349ac5f56e8d44b08eb29b10bfbc2, type: 3}
+    dropRate: 25

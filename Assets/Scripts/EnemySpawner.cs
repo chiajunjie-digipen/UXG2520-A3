@@ -12,7 +12,7 @@ public class EnemySpawner : MonoBehaviour
         public List<EnemyGroup> enemyGroups; //list of groups of enemies to spawn in this wave
         public int waveQuota; //total enemy spawn count
         public float spawnInterval; //spawn interval
-        public int spawnCount; //number of enemies alredy spawned
+        public int spawnCount; //number of enemies already spawned
     }
 
     [System.Serializable]
@@ -44,7 +44,7 @@ public class EnemySpawner : MonoBehaviour
     {
         player = FindObjectOfType<PlayerStats>().transform;
         CalculateWaveQuota();
-        firstWave();
+        //firstWave();
     }
 
     // Update is called once per frame
@@ -68,8 +68,10 @@ public class EnemySpawner : MonoBehaviour
 
     IEnumerator BeginNextWave()
     {
+        //wave for 'waveinterval' seconds before starting next wave
         yield return new WaitForSeconds(waveInterval);
 
+        //if there are more waves to start after currentwave, move on to next wave
         if (currentWaveCount < waves.Count - 1)
         {
             currentWaveCount++;
@@ -77,7 +79,7 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
-    void firstWave()
+    /*void firstWave()
     {
         if (currentWaveCount < waves.Count && waves[currentWaveCount].spawnCount == 0)
         {
@@ -86,7 +88,7 @@ public class EnemySpawner : MonoBehaviour
 
         spawnTimer = 0f;
         SpawnEnemies();
-    }
+    }*/
 
     void CalculateWaveQuota()
     {
