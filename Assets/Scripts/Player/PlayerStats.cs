@@ -22,6 +22,7 @@ public class PlayerStats : MonoBehaviour
     private string data = "";
     public Dictionary<int, Dictionary<string, string>> playerProperties = new Dictionary<int, Dictionary<string, string>>();
     List<string> properties = new List<string>();
+    [SerializeField] bool gameOver;
     private void Awake()
     {
         StreamReader reader = new StreamReader("Assets/CSVs/levels.csv");
@@ -59,6 +60,7 @@ public class PlayerStats : MonoBehaviour
         //level is set for next
         currentXPThreshold = int.Parse(playerProperties[2]["expRequired"]);
 
+
     }
 
     void Update()
@@ -92,11 +94,15 @@ public class PlayerStats : MonoBehaviour
 
     public void Kill()
     {
-        AnalyticsTracker at = GameObject.FindObjectOfType<AnalyticsTracker>();
-        at.xpGained = totalXpWithoutLevelReset;
-        at.counting = false;
-        at.WriteData();
-        Debug.Log("Game Over");
+        if(!gameOver){
+            AnalyticsTracker at = GameObject.FindObjectOfType<AnalyticsTracker>();
+            at.xpGained = totalXpWithoutLevelReset;
+            at.counting = false;
+            at.WriteData();
+            Debug.Log("Game Over");
+            gameOver = true;
+        }
+
     }
 
     //Iframes

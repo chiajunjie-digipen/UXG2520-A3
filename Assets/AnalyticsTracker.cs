@@ -28,9 +28,17 @@ public class AnalyticsTracker : MonoBehaviour
     {
         string filePath = Path.Combine(Application.persistentDataPath, "saveData.csv");
         Debug.Log(filePath);
-        StreamWriter sr = new StreamWriter(filePath, true);
-        sr.WriteLine(enemiesKilled+","+timeSpent+","+xpGained);
-        sr.Close();
+        if(!File.Exists(filePath)){ // checks for file
+            StreamWriter sr = new StreamWriter(filePath, true);
+            sr.WriteLine("enemiesKilled,timeSpent,xpGained"); // adds line if file do not exist
+            sr.WriteLine(enemiesKilled+","+timeSpent+","+xpGained);
+            sr.Close();
+        }
+        else {
+            StreamWriter sr = new StreamWriter(filePath, true);
+            sr.WriteLine(enemiesKilled+","+timeSpent+","+xpGained);
+            sr.Close();
+        }
     }
 }
 
