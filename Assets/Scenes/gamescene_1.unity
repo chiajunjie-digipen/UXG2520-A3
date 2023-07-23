@@ -203,7 +203,7 @@ MonoBehaviour:
     - enemyName: enemy1 spider
       enemyCount: 5
       spawnCount: 0
-      enemyPrefab: {fileID: 1712864287}
+      enemyPrefab: {fileID: 7572788514024987449, guid: 39ecae6346fc23e47b965daf89d43320, type: 3}
     waveQuota: 0
     spawnInterval: 2
     spawnCount: 0
@@ -212,7 +212,7 @@ MonoBehaviour:
     - enemyName: enemy2 ghost
       enemyCount: 3
       spawnCount: 0
-      enemyPrefab: {fileID: 1127664311}
+      enemyPrefab: {fileID: 7752378398696361978, guid: 55702a59ea0134648af6597e6710e3a1, type: 3}
     waveQuota: 0
     spawnInterval: 2
     spawnCount: 0
@@ -695,11 +695,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponData: {fileID: 11400000, guid: b0a71246d90bf3c488ecc07d66fb20d4, type: 2}
---- !u!1 &1127664311 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7752378398696361978, guid: 55702a59ea0134648af6597e6710e3a1, type: 3}
-  m_PrefabInstance: {fileID: 216146883465176415}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1201847730
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -934,11 +929,6 @@ Transform:
   m_Father: {fileID: 173699428}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1712864287 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7572788514024987449, guid: 39ecae6346fc23e47b965daf89d43320, type: 3}
-  m_PrefabInstance: {fileID: 2544105235371139817}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1786618865
 GameObject:
   m_ObjectHideFlags: 0
@@ -1174,7 +1164,11 @@ MonoBehaviour:
   currentXPThreshold: 0
   currentLevel: 0
   maxHealth: 0
+  gameOver: 0
   invincibilityDuration: 0.5
+  strengthenDuration: 0
+  strengthenTimer: 0
+  isStrengthened: 0
 --- !u!114 &1827079333
 MonoBehaviour:
   m_ObjectHideFlags: 0

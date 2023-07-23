@@ -34,7 +34,7 @@ public class EnemySpawner : MonoBehaviour
     public bool maxEnemiesReached = false; //indicates if the max amount of enemies has been reached
     public float waveInterval; //interval between waves
 
-    [Header("Spawn Positons")]
+    [Header("Spawn Positions")]
     public List<Transform> relativeSpawnPoints; //list to store relative spawn points of enemies
 
     Transform player;
@@ -44,6 +44,7 @@ public class EnemySpawner : MonoBehaviour
     {
         player = FindObjectOfType<PlayerStats>().transform;
         CalculateWaveQuota();
+        firstWave();
     }
 
     // Update is called once per frame
@@ -74,6 +75,17 @@ public class EnemySpawner : MonoBehaviour
             currentWaveCount++;
             CalculateWaveQuota();
         }
+    }
+
+    void firstWave()
+    {
+        if (currentWaveCount < waves.Count && waves[currentWaveCount].spawnCount == 0)
+        {
+            StartCoroutine(BeginNextWave());
+        }
+
+        spawnTimer = 0f;
+        SpawnEnemies();
     }
 
     void CalculateWaveQuota()
@@ -109,6 +121,9 @@ public class EnemySpawner : MonoBehaviour
                     //spawn enemy at a random position near the player
                     Instantiate(enemyGroup.enemyPrefab, player.position + relativeSpawnPoints[Random.Range(0, relativeSpawnPoints.Count)].position, Quaternion.identity);
 
+                    //Vector2 spawnPosition = new Vector2(player.transform.position.x + Random.Range(-10f, 10f), player.transform.position.y + Random.Range(-10f, 10f));
+                    //Instantiate(enemyGroup.enemyPrefab, spawnPosition, Quaternion.identity);
+
                     enemyGroup.spawnCount++;
                     waves[currentWaveCount].spawnCount++;
                     enemiesAlive++;
@@ -126,4 +141,5 @@ public class EnemySpawner : MonoBehaviour
     {
         enemiesAlive--; 
     }
+
 }

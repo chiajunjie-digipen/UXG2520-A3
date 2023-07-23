@@ -74,7 +74,10 @@ public class EnemyStats : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            Kill();
+            if (gameObject != null)
+            {
+                Kill();
+            }
         }
     }
 
