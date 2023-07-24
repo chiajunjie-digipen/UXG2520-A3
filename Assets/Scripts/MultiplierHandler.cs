@@ -23,7 +23,6 @@ public class MultiplierHandler : MonoBehaviour
             int counter = 0;
             foreach(string property in properties) {
                 multiplierProperties[int.Parse(dataList[0])].Add(property, dataList[counter]);
-                Debug.Log(property + " " + dataList[counter]);
                 counter++;
             }
             data = reader.ReadLine();

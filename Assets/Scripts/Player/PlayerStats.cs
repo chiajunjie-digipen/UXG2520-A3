@@ -111,6 +111,11 @@ public class PlayerStats : MonoBehaviour
             at.WriteData();
             Debug.Log("Game Over");
             gameOver = true;
+            if(at.timeSpent > 50) {
+                FindObjectOfType<SceneController>().SceneChange("Good End");
+            } else {
+                FindObjectOfType<SceneController>().SceneChange("Bad End");
+            }
         }
 
     }

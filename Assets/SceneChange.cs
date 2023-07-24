@@ -14,8 +14,13 @@ public class SceneChange : MonoBehaviour
     }
 
     // Update is called once per frame
-    public void Press()
+    public void Press(string sceneToChange)
     {
-        SceneManager.LoadScene("Dialogue");
+        SceneManager.LoadScene(sceneToChange);
+    }
+
+    public void Exit()
+    {
+        Application.Quit();
     }
 }
