@@ -23,6 +23,7 @@ public class PlayerStats : MonoBehaviour
     public Dictionary<int, Dictionary<string, string>> playerProperties = new Dictionary<int, Dictionary<string, string>>();
     List<string> properties = new List<string>();
     [SerializeField] bool gameOver;
+    [SerializeField] List<GameObject> weapons;
 
     private void Awake() //jj
     {
@@ -61,7 +62,7 @@ public class PlayerStats : MonoBehaviour
         //level is set for next
         currentXPThreshold = int.Parse(playerProperties[2]["expRequired"]);
 
-
+        weapons[Random.Range(0,4)].gameObject.SetActive(true);
     }
 
     void Update()

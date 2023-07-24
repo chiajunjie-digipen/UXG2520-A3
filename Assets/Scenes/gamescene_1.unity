@@ -139,7 +139,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &145712252
 Transform:
   m_ObjectHideFlags: 0
@@ -648,6 +648,8 @@ MonoBehaviour:
   currentState: 0
   previousState: 0
   pauseScreen: {fileID: 1589922078}
+  gameOverScreen: {fileID: 0}
+  isGameOver: 0
 --- !u!4 &699643722
 Transform:
   m_ObjectHideFlags: 0
@@ -2489,6 +2491,11 @@ MonoBehaviour:
   currentLevel: 0
   maxHealth: 0
   gameOver: 0
+  weapons:
+  - {fileID: 1059567702}
+  - {fileID: 356664606}
+  - {fileID: 145712251}
+  - {fileID: 1786618865}
   invincibilityDuration: 0.5
   invincibilityTimer: 0
   isInvincible: 0
