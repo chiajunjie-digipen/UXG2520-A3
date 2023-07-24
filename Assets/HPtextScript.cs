@@ -13,6 +13,7 @@ public class HPtextScript : MonoBehaviour
     {
         hp = GetComponent<TMP_Text>();
         ps = FindObjectOfType<PlayerStats>();
+        Debug.Log(Application.persistentDataPath);
     }
 
     // Update is called once per frame
