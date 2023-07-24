@@ -44,7 +44,7 @@ public class EnemySpawner : MonoBehaviour
     {
         player = FindObjectOfType<PlayerStats>().transform;
         CalculateWaveQuota();
-        //firstWave();
+        firstWave();
     }
 
     // Update is called once per frame
@@ -79,7 +79,7 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
-    /*void firstWave()
+    void firstWave()
     {
         if (currentWaveCount < waves.Count && waves[currentWaveCount].spawnCount == 0)
         {
@@ -88,7 +88,7 @@ public class EnemySpawner : MonoBehaviour
 
         spawnTimer = 0f;
         SpawnEnemies();
-    }*/
+    }
 
     void CalculateWaveQuota()
     {
