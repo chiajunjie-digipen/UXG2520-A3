@@ -7,7 +7,7 @@ public class PlayerStats : MonoBehaviour
 {
 
     //current stats
-    [SerializeField] float currentHealth;
+    public float currentHealth;
     [SerializeField] float currentRecovery;
     public float currentMoveSpeed;
 
@@ -17,7 +17,7 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] int currentXPThreshold;
     public int currentLevel;
 
-    [SerializeField] float maxHealth;
+    public float maxHealth;
 
     private string data = "";
     public Dictionary<int, Dictionary<string, string>> playerProperties = new Dictionary<int, Dictionary<string, string>>();

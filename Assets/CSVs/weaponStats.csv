@@ -1,5 +1,5 @@
 weapon_id,weaponName,weaponAtk,weaponAtkSpd,weaponRange,cooldown,description
 1,Orb,10,1,1,1,A protective aura emnates and envelops you. 
-2,Sword,12,1.5,1,1,The blade is slightly dulled by age but still useful for slaying monsters. The wisdom of its previous owners flows through you.
-3,Spear,15,1.1,2,1.5,A hefty spear clearly well-loved once upon a time. Near the base of the handle lies a small engraving of two initials: 'N.L.' 
-4,Arrow,12,0.2,3,2,Carved from sturdy wood. This bow gleams with polish; its bowstring taut with anticipation for the next arrow to be shot.
+2,Sword,12,4,1,0.4,The blade is slightly dulled by age but still useful for slaying monsters. The wisdom of its previous owners flows through you.
+3,Spear,15,6,2,0.4,A hefty spear clearly well-loved once upon a time. Near the base of the handle lies a small engraving of two initials: 'N.L.' 
+4,Arrow,7,10,3,0.1,Carved from sturdy wood. This bow gleams with polish; its bowstring taut with anticipation for the next arrow to be shot.
