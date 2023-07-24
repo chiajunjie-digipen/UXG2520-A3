@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HealthPot : MonoBehaviour, ICollectible
 {
-    public int healthToRestore;
+    public int healthToRestore; //shar
     public void Collect()
     {
         PlayerStats player = FindObjectOfType<PlayerStats>();

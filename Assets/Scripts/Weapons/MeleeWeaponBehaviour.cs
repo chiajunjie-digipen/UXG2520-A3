@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MeleeWeaponBehaviour : MonoBehaviour
 {
-    public WeaponScriptableObj weaponData;
+    public WeaponScriptableObj weaponData; //shar
 
     public float destroyAfterSeconds;
 
@@ -13,7 +13,7 @@ public class MeleeWeaponBehaviour : MonoBehaviour
     protected float currentCooldownDuration;
     protected int currentPierce;
 
-    void Awake()
+    void Awake() //jj
     {
         PlayerStats ps = FindObjectOfType<PlayerStats>(); // there is only one player and this is technically spaghetti code i hate myself too
         currentDamage = weaponData.Damage * 
@@ -32,7 +32,7 @@ public class MeleeWeaponBehaviour : MonoBehaviour
         currentPierce = weaponData.Pierce;
     }
     // Start is called before the first frame update
-    protected virtual void Start()
+    protected virtual void Start() //shar
     {
         Destroy(gameObject, destroyAfterSeconds);
     }

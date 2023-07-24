@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ProjectileWeaponBehaviour : MonoBehaviour
 {
-    // base script for projectiles
+    // base script for projectiles //shar
     public WeaponScriptableObj weaponData;
 
     protected Vector3 direction;
@@ -16,7 +16,7 @@ public class ProjectileWeaponBehaviour : MonoBehaviour
     protected float currentCooldownDuration;
     protected int currentPierce;
 
-    void Awake()
+    void Awake() //jj
     {
         PlayerStats ps = FindObjectOfType<PlayerStats>(); // there is only one player and this is technically spaghetti code i hate myself too
         currentDamage = weaponData.Damage * 
@@ -35,7 +35,7 @@ public class ProjectileWeaponBehaviour : MonoBehaviour
 
 
     // Start is called before the first frame update
-    protected virtual void Start()
+    protected virtual void Start() //shar
     {
         Destroy(gameObject, destroyAfterSeconds);
     }

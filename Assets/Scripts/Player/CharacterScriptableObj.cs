@@ -6,7 +6,7 @@ using System.IO;
 [CreateAssetMenu(fileName = "CharacterScriptableObj", menuName = "ScriptableObjs/Character")]
 public class CharacterScriptableObj : ScriptableObject
 {
-    [SerializeField]
+    [SerializeField] //jj
     GameObject startingWeapon;
     public GameObject StartingWeapon { get => startingWeapon; private set => startingWeapon = value; }
 

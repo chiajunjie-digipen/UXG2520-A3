@@ -6,12 +6,12 @@ using System.IO;
 public class PlayerStats : MonoBehaviour
 {
 
-    //current stats
+    //current stats //shar
     public float currentHealth;
     [SerializeField] float currentRecovery;
     public float currentMoveSpeed;
 
-    //THE PART WITH LEVELS BABYYYYY
+    //THE PART WITH LEVELS BABYYYYY //jj
     [SerializeField] int xp;
     [SerializeField] int totalXpWithoutLevelReset;
     [SerializeField] int currentXPThreshold;
@@ -24,7 +24,7 @@ public class PlayerStats : MonoBehaviour
     List<string> properties = new List<string>();
     [SerializeField] bool gameOver;
 
-    private void Awake()
+    private void Awake() //jj
     {
         StreamReader reader = new StreamReader("Assets/CSVs/levels.csv");
         properties = new List<string>(reader.ReadLine().Split(','));
@@ -66,7 +66,7 @@ public class PlayerStats : MonoBehaviour
 
     void Update()
     {
-        if (invincibilityTimer > 0)
+        if (invincibilityTimer > 0) //timer for invincibility //shar
         {
             invincibilityTimer -= Time.deltaTime;
         }
@@ -75,7 +75,7 @@ public class PlayerStats : MonoBehaviour
             isInvincible = false;
         }
 
-        if (strengthenTimer > 0) //timer countdown for strengthening
+        if (strengthenTimer > 0) //timer countdown for strengthening //jj
         {
             strengthenTimer -= Time.deltaTime;
         }
@@ -85,7 +85,7 @@ public class PlayerStats : MonoBehaviour
         }
     }
 
-    public void TakeDamage(float dmg) //how the player gets beat tf up
+    public void TakeDamage(float dmg) //how the player gets beat up //shar
     {
         if (!isInvincible)
         {
@@ -102,7 +102,7 @@ public class PlayerStats : MonoBehaviour
         
     }
 
-    public void Kill()
+    public void Kill() //jj
     {
         if(!gameOver){
             AnalyticsTracker at = GameObject.FindObjectOfType<AnalyticsTracker>();
@@ -116,17 +116,17 @@ public class PlayerStats : MonoBehaviour
     }
 
     //Iframes
-    [Header("I Frames")]
+    [Header("I Frames")] //shar
     public float invincibilityDuration;
     float invincibilityTimer;
     bool isInvincible;
 
-    [Header("Strengthening")]
+    [Header("Strengthening")] //jj
     public float strengthenDuration;
     [SerializeField] float strengthenTimer;
     public bool isStrengthened;
 
-    public void RestoreHealth (float amount) //for hp pot
+    public void RestoreHealth (float amount) //for hp pot //shar
     {
         // heal when hp is less than max hp
         if (currentHealth < maxHealth)
@@ -142,7 +142,7 @@ public class PlayerStats : MonoBehaviour
 
     }
 
-    public void XpUp (int amount) { // doubles as level up code
+    public void XpUp (int amount) { // doubles as level up code //jj
         xp += amount;
         totalXpWithoutLevelReset += amount; // whole new variable so i dont need to calculate whenever xp resets to zero. my life is a joke
         if (xp >= currentXPThreshold) {
@@ -158,7 +158,7 @@ public class PlayerStats : MonoBehaviour
         }
     }
 
-    public void Invincible(float duration) //for immune pot
+    public void Invincible(float duration) //for immune pot //shar
     {
         if (!isInvincible) //if not invincible, make invincible and set timer to duration
         {
@@ -167,7 +167,7 @@ public class PlayerStats : MonoBehaviour
         }
     }
 
-    public void Strengthen(float duration) //for strengthening pot
+    public void Strengthen(float duration) //for strengthening pot //jj
     {
         if (!isStrengthened) //if not strengthened, make strengthened and set timer to duration
         {

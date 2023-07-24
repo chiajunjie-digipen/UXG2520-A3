@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DropRateManager : MonoBehaviour
 {
-    [System.Serializable]
+    [System.Serializable] //shar
     public class Drops
     {
         public string name;
@@ -31,6 +31,7 @@ public class DropRateManager : MonoBehaviour
                 possibleDrops.Add(rate);
             }
         }
+        //checks if there are possible drops
         if (possibleDrops.Count > 0)
         {
             Drops drops = possibleDrops[UnityEngine.Random.Range(0, possibleDrops.Count)];

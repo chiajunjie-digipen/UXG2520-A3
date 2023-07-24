@@ -5,7 +5,7 @@ using System.IO;
 
 public class EnemyStats : MonoBehaviour
 {
-    public EnemyScriptableObj enemyData;
+    public EnemyScriptableObj enemyData; //shar
 
     //current stats
     public float currentMoveSpeed;
@@ -14,14 +14,14 @@ public class EnemyStats : MonoBehaviour
     public int enemyId;
     List<string> properties = new List<string>();
 
-    private string data = "";
+    private string data = ""; //jj
     public Dictionary<int, Dictionary<string, float>> enemyProperties = new Dictionary<int, Dictionary<string, float>>();
     public int XPdrop;
 
-    public float despawnDistance = 20f;
+    public float despawnDistance = 20f; //shar
     Transform player;
 
-    void Awake()
+    void Awake() //jj
     {
         /*currentMoveSpeed = enemyData.MoveSpeed;
         currentHealth = enemyData.MaxHealth;
@@ -55,7 +55,7 @@ public class EnemyStats : MonoBehaviour
 
     }
 
-    void Start()
+    void Start() //shar
     {
         player = FindObjectOfType<PlayerStats>().transform;
     }
@@ -82,14 +82,14 @@ public class EnemyStats : MonoBehaviour
         }
     }
 
-    public void Kill()
+    public void Kill() //jj
     {
         PlayerStats player = GameObject.Find("Player").GetComponent<PlayerStats>();
         player.XpUp(XPdrop);
         Destroy(gameObject);
     }
 
-    private void OnCollisionStay2D(Collision2D col)
+    private void OnCollisionStay2D(Collision2D col) //shar
     {
         PlayerStats player = col.gameObject.GetComponent<PlayerStats>();
         player.TakeDamage(currentDamage);

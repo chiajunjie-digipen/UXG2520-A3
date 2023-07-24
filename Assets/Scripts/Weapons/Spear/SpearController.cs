@@ -5,7 +5,7 @@ using UnityEngine;
 public class SpearController : WeaponController
 {
 
-    // Start is called before the first frame update
+    // shar
     protected override void Start()
     {
         base.Start();

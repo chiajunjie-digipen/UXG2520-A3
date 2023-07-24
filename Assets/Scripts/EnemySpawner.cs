@@ -5,7 +5,7 @@ using UnityEngine.Rendering;
 
 public class EnemySpawner : MonoBehaviour
 {
-    [System.Serializable]
+    [System.Serializable] //shar
     public class Wave
     {
         public string waveName;

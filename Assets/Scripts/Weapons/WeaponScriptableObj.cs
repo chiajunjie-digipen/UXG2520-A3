@@ -8,7 +8,7 @@ using System.IO;
 public class WeaponScriptableObj : ScriptableObject
 {
 
-    //weapon base stats
+    //weapon base stats //jj
     [SerializeField]
     float damage;
     public float Damage { get => damage; set => damage = value; }

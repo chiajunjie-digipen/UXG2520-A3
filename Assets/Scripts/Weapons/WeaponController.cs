@@ -4,7 +4,7 @@ using UnityEditor.Build;
 using UnityEngine;
 using System.IO;
 
-public class WeaponController : MonoBehaviour
+public class WeaponController : MonoBehaviour //jj
 {
     [Header("Weapon Stats")]
     public WeaponScriptableObj weaponData;
@@ -46,7 +46,7 @@ public class WeaponController : MonoBehaviour
     }
 
     // Update is called once per frame
-    protected virtual void Update()
+    protected virtual void Update() //shar
     {
         currentCooldown -= Time.deltaTime;
         if(currentCooldown <= 0f)
