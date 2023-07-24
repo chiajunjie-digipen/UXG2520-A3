@@ -118,12 +118,12 @@ public class PlayerStats : MonoBehaviour
     //Iframes
     [Header("I Frames")] //shar
     public float invincibilityDuration;
-    float invincibilityTimer;
-    bool isInvincible;
+    public float invincibilityTimer;
+    public bool isInvincible;
 
     [Header("Strengthening")] //jj
     public float strengthenDuration;
-    [SerializeField] float strengthenTimer;
+    [SerializeField] public float strengthenTimer;
     public bool isStrengthened;
 
     public void RestoreHealth (float amount) //for hp pot //shar
