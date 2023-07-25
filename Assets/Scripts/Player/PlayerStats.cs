@@ -39,7 +39,6 @@ public class PlayerStats : MonoBehaviour
             int counter = 0;
             foreach(string property in properties) {
                 playerProperties[int.Parse(dataList[0])].Add(property, dataList[counter]);
-                Debug.Log(property + " " + dataList[counter]);
                 counter++;
             }
             data = reader.ReadLine();
@@ -112,7 +111,7 @@ public class PlayerStats : MonoBehaviour
             at.WriteData();
             Debug.Log("Game Over");
             gameOver = true;
-            if(at.timeSpent > 50) {
+            if(currentLevel > 3) {
                 FindObjectOfType<SceneController>().SceneChange("Good End");
             } else {
                 FindObjectOfType<SceneController>().SceneChange("Bad End");

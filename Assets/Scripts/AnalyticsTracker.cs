@@ -10,6 +10,7 @@ public class AnalyticsTracker : MonoBehaviour
     public float timeSpent;
     public int xpGained;
     public bool counting;
+    
     void Start()
     {
         counting = true;
@@ -29,15 +30,24 @@ public class AnalyticsTracker : MonoBehaviour
         string filePath = Path.Combine(Application.persistentDataPath, "saveData.csv");
         Debug.Log(filePath);
         if(!File.Exists(filePath)){ // checks for file
-            StreamWriter sr = new StreamWriter(filePath, true);
-            sr.WriteLine("enemiesKilled,timeSpent,xpGained"); // adds line if file do not exist
-            sr.WriteLine(enemiesKilled+","+timeSpent+","+xpGained);
-            sr.Close();
+            StreamWriter sw = new StreamWriter(filePath, true);
+            sw.WriteLine("sessionId,enemiesKilled,timeSpent,xpGained"); // adds line if file do not exist
+            sw.WriteLine("1"+","+enemiesKilled+","+timeSpent+","+xpGained); // first entry
+            sw.Close();
         }
         else {
-            StreamWriter sr = new StreamWriter(filePath, true);
-            sr.WriteLine(enemiesKilled+","+timeSpent+","+xpGained);
+            StreamReader sr = new StreamReader(filePath);
+            string data = "";
+            string chaser = "";
+            while(data!=null){
+                chaser = data;
+                data = sr.ReadLine();
+            }
+            List<string> analytics = new List<string>(chaser.Split(","));
             sr.Close();
+            StreamWriter sw = new StreamWriter(filePath, true);
+            sw.WriteLine((int.Parse(analytics[0])+1).ToString()+","+enemiesKilled+","+timeSpent+","+xpGained);
+            sw.Close();
         }
     }
 }

@@ -1,17 +1,17 @@
-dialogue_id,character_id,next_dialogue,dialogue_text,nextScene
-1,1,2,I need to level up. Fast.,
-2,2,3,I'm afraid there's no way of doing that.,
-3,1,4,Are you sure about that?,
-4,2,5,Quite. Unless-,
-5,1,6,I go out and fight ALL the monsters?,
-6,1,7,You got it.,
-7,2,-1,That... that wasn't what I said-,gamescene_1
-8,2,9,So you fought all of them. How was it?,
-9,1,10,Bad.,
-10,2,11,Maybe next time you'll listen to everything I say instead of-,
-11,1,12,Cutting you off?,
-12,2,-1,...uh huh. ,Game Over
-13,2,14,Against all odds... you didn't do TOO badly.,
-14,1,15,Don't patronize me.,
-15,2,16,No. Seriously.,
-16,1,-1,Nice.,Game Over
+dialogue_id,character_name,next_dialogue,dialogue_text,nextScene
+1,Protagonist,2,I need to level up. Fast.,
+2,Guide,3,I'm afraid there's no way of doing that.,
+3,Protagonist,4,Are you sure about that?,
+4,Guide,5,Quite. Unless-,
+5,Protagonist,6,I go out and fight ALL the monsters?,
+6,Protagonist,7,You got it.,
+7,Guide,-1,That... that wasn't what I said-,gamescene_1
+8,Guide,9,So you fought all of them. How was it?,
+9,Protagonist,10,Bad.,
+10,Guide,11,Maybe next time you'll listen to everything I say instead of-,
+11,Protagonist,12,Cutting you off?,
+12,Guide,-1,...uh huh. ,Game Over
+13,Guide,14,Against all odds... you didn't do TOO badly.,
+14,Protagonist,15,Don't patronize me.,
+15,Guide,16,No. Seriously.,
+16,Protagonist,-1,Nice.,Game Over

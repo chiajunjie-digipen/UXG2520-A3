@@ -4,17 +4,20 @@ using UnityEngine;
 using System.IO;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.UI;
 
 public class DialogueSystem : MonoBehaviour
 {
+
     public TextMeshProUGUI textComponent;
+    public TextMeshProUGUI characterName;
     // start of getting data
     private string data = "";
     public Dictionary<int, Dictionary<string, string>> dialogueProperties = new Dictionary<int, Dictionary<string, string>>();
     List<string> properties = new List<string>();
     // end of getting data
     public float textSpeed;
-
+    
     public int index;
 
     // Start is called before the first frame update
@@ -32,13 +35,14 @@ public class DialogueSystem : MonoBehaviour
             int counter = 0;
             foreach(string property in properties) {
                 dialogueProperties[int.Parse(dataList[0])].Add(property, dataList[counter]);
-                Debug.Log(dataList[0] + " " + property + " " + dataList[counter]);
+                //Debug.Log(dataList[0] + " " + property + " " + dataList[counter]);
                 counter++;
             }
             data = reader.ReadLine();
         }
         reader.Close(); 
 
+        characterName.text = dialogueProperties[index]["character_name"];
         StartDialogue(index);
     }
 
@@ -79,6 +83,7 @@ public class DialogueSystem : MonoBehaviour
         {
             index++;
             textComponent.text = string.Empty;
+            characterName.text = dialogueProperties[index]["character_name"];
             StartCoroutine(TypeLine());
         }
         else
