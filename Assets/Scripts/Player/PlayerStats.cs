@@ -25,6 +25,7 @@ public class PlayerStats : MonoBehaviour
     List<string> properties = new List<string>();
     [SerializeField] bool gameOver;
     [SerializeField] List<GameObject> weapons;
+    public int weaponUsed;
 
     private void Awake() //jj
     {
@@ -61,8 +62,10 @@ public class PlayerStats : MonoBehaviour
 
         //level is set for next
         currentXPThreshold = int.Parse(playerProperties[2]["expRequired"]);
-
-        weapons[Random.Range(0,4)].gameObject.SetActive(true);
+        
+        weaponUsed = Random.Range(0,4);
+        GameObject.FindObjectOfType<AnalyticsTracker>().weaponUsed = weaponUsed + 1; // weapon assigned to list weapons is weaponId - 1 so +1 is used to offset for csv purposes
+        weapons[weaponUsed].gameObject.SetActive(true);
     }
 
     void Update()

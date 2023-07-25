@@ -2935,6 +2935,7 @@ MonoBehaviour:
   timeSpent: 0
   xpGained: 0
   counting: 0
+  weaponUsed: 0
 --- !u!4 &958211388
 Transform:
   m_ObjectHideFlags: 0
@@ -5669,6 +5670,7 @@ MonoBehaviour:
   timeSpent: 0
   xpGained: 0
   counting: 0
+  weaponUsed: 0
 --- !u!4 &1764359975
 Transform:
   m_ObjectHideFlags: 0
@@ -6237,10 +6239,10 @@ MonoBehaviour:
   maxHealth: 0
   gameOver: 0
   weapons:
-  - {fileID: 1059567702}
-  - {fileID: 356664606}
-  - {fileID: 145712251}
   - {fileID: 1786618865}
+  - {fileID: 356664606}
+  - {fileID: 1059567702}
+  - {fileID: 145712251}
   invincibilityDuration: 0.5
   invincibilityTimer: 0
   isInvincible: 0

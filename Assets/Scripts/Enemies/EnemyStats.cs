@@ -71,6 +71,7 @@ public class EnemyStats : MonoBehaviour
     public void TakeDamage(float dmg)
     {
         currentHealth -= dmg;
+        FindObjectOfType<AnalyticsTracker>().damageDealt += (int)dmg;
 
         if (currentHealth <= 0)
         {

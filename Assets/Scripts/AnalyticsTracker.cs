@@ -10,12 +10,15 @@ public class AnalyticsTracker : MonoBehaviour //jj
     public float timeSpent;
     public int xpGained;
     public bool counting;
+    public int weaponUsed;
+    public int damageDealt;
     
     void Start()
     {
         counting = true;
         enemiesKilled = xpGained = 0;
         timeSpent = 0; // for some reason i cant put a float above so whatever i dont wanna risk anything
+        damageDealt = 0;
     }
 
     void Update() {
@@ -31,8 +34,8 @@ public class AnalyticsTracker : MonoBehaviour //jj
         Debug.Log(filePath);
         if(!File.Exists(filePath)){ // checks for file
             StreamWriter sw = new StreamWriter(filePath, true);
-            sw.WriteLine("sessionId,enemiesKilled,timeSpent,xpGained"); // adds line if file do not exist
-            sw.WriteLine("1"+","+enemiesKilled+","+timeSpent+","+xpGained); // first entry
+            sw.WriteLine("sessionId,enemiesKilled,timeSpent,xpGained,weaponUsed,damageDealt"); // adds line if file do not exist
+            sw.WriteLine("1"+","+enemiesKilled+","+timeSpent+","+xpGained+","+weaponUsed+","+damageDealt); // first entry
             sw.Close();
         }
         else {
@@ -46,7 +49,7 @@ public class AnalyticsTracker : MonoBehaviour //jj
             List<string> analytics = new List<string>(chaser.Split(","));
             sr.Close();
             StreamWriter sw = new StreamWriter(filePath, true);
-            sw.WriteLine((int.Parse(analytics[0])+1).ToString()+","+enemiesKilled+","+timeSpent+","+xpGained);
+            sw.WriteLine((int.Parse(analytics[0])+1).ToString()+","+enemiesKilled+","+timeSpent+","+xpGained+","+weaponUsed+","+damageDealt);
             sw.Close();
         }
     }
