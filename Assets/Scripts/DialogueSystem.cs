@@ -26,7 +26,7 @@ public class DialogueSystem : MonoBehaviour
     {
         textComponent.text = string.Empty;
 
-        StreamReader reader = new StreamReader("Assets/CSVs/dialogue.csv");
+        StreamReader reader = new StreamReader(Application.streamingAssetsPath+ "/CSVs/dialogue.csv");
         properties = new List<string>(reader.ReadLine().Split(','));
         data = reader.ReadLine();
         

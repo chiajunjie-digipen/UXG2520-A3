@@ -27,7 +27,7 @@ public class CharacterScriptableObj : ScriptableObject
     List<string> properties = new List<string>();
 
     void Awake() {
-        StreamReader reader = new StreamReader("Assets/CSVs/levels.csv");
+        StreamReader reader = new StreamReader(Application.streamingAssetsPath + "/CSVs/levels.csv");
         properties = new List<string>(reader.ReadLine().Split(','));
         
 

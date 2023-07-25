@@ -29,7 +29,7 @@ public class EnemyStats : MonoBehaviour
 
         enemyId = enemyData.enemyid;
 
-        StreamReader reader = new StreamReader("Assets/CSVs/enemyStats.csv");
+        StreamReader reader = new StreamReader(Application.streamingAssetsPath + "/CSVs/enemyStats.csv");
         properties = new List<string>(reader.ReadLine().Split(','));
 
         data = reader.ReadLine();

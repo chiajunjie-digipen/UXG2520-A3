@@ -38,7 +38,7 @@ public class WeaponScriptableObj : ScriptableObject
     List<string> properties = new List<string>();
 
     void Awake() {
-        StreamReader reader = new StreamReader("Assets/CSVs/weaponStats.csv");
+        StreamReader reader = new StreamReader(Application.streamingAssetsPath + "/CSVs/weaponStats.csv");
         properties = new List<string>(reader.ReadLine().Split(','));
 
         data = reader.ReadLine();

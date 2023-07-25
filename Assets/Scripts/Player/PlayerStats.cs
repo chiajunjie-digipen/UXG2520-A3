@@ -27,7 +27,7 @@ public class PlayerStats : MonoBehaviour
 
     private void Awake() //jj
     {
-        StreamReader reader = new StreamReader("Assets/CSVs/levels.csv");
+        StreamReader reader = new StreamReader(Application.streamingAssetsPath + "/CSVs/levels.csv");
         properties = new List<string>(reader.ReadLine().Split(','));
         
 
