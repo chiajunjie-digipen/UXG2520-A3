@@ -7,7 +7,7 @@ using TMPro;
 using UnityEngine.UI;
 using UnityEngine.AddressableAssets;
 
-public class DialogueSystem : MonoBehaviour
+public class DialogueSystem : MonoBehaviour //jj
 {
 
     public TextMeshProUGUI textComponent;

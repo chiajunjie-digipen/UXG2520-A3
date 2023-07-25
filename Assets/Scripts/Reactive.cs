@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Reactive : MonoBehaviour
 {
-    // Start is called before the first frame update
+    // jj
     DialogueSystem ds;
     [SerializeField] string me;
     void Start()
@@ -13,7 +13,6 @@ public class Reactive : MonoBehaviour
         ds = GameObject.FindObjectOfType<DialogueSystem>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if(ds.characterName.text == me) {

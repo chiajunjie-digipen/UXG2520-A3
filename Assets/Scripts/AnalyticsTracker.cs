@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 
-public class AnalyticsTracker : MonoBehaviour
+public class AnalyticsTracker : MonoBehaviour //jj
 {
     // Start is called before the first frame update
     public int enemiesKilled;

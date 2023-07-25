@@ -5,7 +5,7 @@ using TMPro;
 
 public class HPtextScript : MonoBehaviour
 {
-    // Start is called before the first frame update
+    // jj
 
     TMP_Text hp;
     PlayerStats ps;
@@ -16,7 +16,6 @@ public class HPtextScript : MonoBehaviour
         Debug.Log(Application.persistentDataPath);
     }
 
-    // Update is called once per frame
     void Update()
     {
         hp.text = ps.currentHealth.ToString() + "/" + ps.maxHealth.ToString();

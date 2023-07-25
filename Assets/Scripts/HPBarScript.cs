@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class HPBarScript : MonoBehaviour
 {
-    // Start is called before the first frame update
+    // jj
     Slider hp;
     PlayerStats ps;
     void Start()
@@ -14,7 +14,6 @@ public class HPBarScript : MonoBehaviour
         ps = FindObjectOfType<PlayerStats>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         hp.maxValue = ps.maxHealth;

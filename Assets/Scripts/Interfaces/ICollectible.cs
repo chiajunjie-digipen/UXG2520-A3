@@ -1,4 +1,4 @@
-public interface ICollectible
+public interface ICollectible //shar
 {
     void Collect();
 }

@@ -6,7 +6,7 @@ using System.IO;
 
 public class MultiplierHandler : MonoBehaviour
 {
-    // Start is called before the first frame update
+    // jj
     private string data = "";
     public Dictionary<int, Dictionary<string, string>> multiplierProperties = new Dictionary<int, Dictionary<string, string>>();
     List<string> properties = new List<string>();
@@ -31,7 +31,6 @@ public class MultiplierHandler : MonoBehaviour
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         

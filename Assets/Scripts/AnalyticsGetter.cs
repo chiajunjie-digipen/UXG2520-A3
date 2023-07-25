@@ -4,7 +4,7 @@ using UnityEngine;
 using System.IO;
 using TMPro;
 
-public class AnalyticsGetter : MonoBehaviour
+public class AnalyticsGetter : MonoBehaviour //jj
 {
     //private string data = "";
     //public Dictionary<int, Dictionary<string, string>> resultProperties = new Dictionary<int, Dictionary<string, string>>();

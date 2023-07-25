@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour
 {
-    public void SceneChange(string name)
+    public void SceneChange(string name) //shar
     {
         SceneManager.LoadScene(name);
         Time.timeScale = 1;
