@@ -85,6 +85,10 @@ public class PlayerStats : MonoBehaviour
             isStrengthened = false;
         }
 
+    }
+
+    void Start()
+    {
         UpdateLevelText();
     }
 
