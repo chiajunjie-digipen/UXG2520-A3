@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using TMPro;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -83,6 +84,8 @@ public class PlayerStats : MonoBehaviour
         {
             isStrengthened = false;
         }
+
+        UpdateLevelText();
     }
 
     public void TakeDamage(float dmg) //how the player gets beat up //shar
@@ -131,6 +134,10 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] public float strengthenTimer;
     public bool isStrengthened;
 
+    [Header("UI")]
+    public TMP_Text levelText;
+    
+
     public void RestoreHealth (float amount) //for hp pot //shar
     {
         // heal when hp is less than max hp
@@ -161,6 +168,8 @@ public class PlayerStats : MonoBehaviour
 
             currentMoveSpeed = float.Parse(playerProperties[currentLevel]["playerMoveSpd"]);
         }
+
+        UpdateLevelText();
     }
 
     public void Invincible(float duration) //for immune pot //shar
@@ -179,5 +188,10 @@ public class PlayerStats : MonoBehaviour
             isStrengthened = true;
             strengthenTimer = duration;
         }
+    }
+
+    void UpdateLevelText()
+    {
+        levelText.text = "LVL" + currentLevel.ToString();
     }
 }
