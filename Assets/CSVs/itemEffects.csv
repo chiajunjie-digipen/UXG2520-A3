@@ -1,7 +1,0 @@
-itemEffect_id,itemDmg,itemDuration,ONSELF,effectSprite
-1,50,2,FALSE,
-2,25,3,FALSE,
-3,150,1,FALSE,
-4,0,5,TRUE,
-5,0,3,TRUE,
-6,20,5,TRUE,

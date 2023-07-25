@@ -97,9 +97,11 @@ public class EnemyStats : MonoBehaviour
 
     private void OnDestroy()
     {
-        GameObject.FindObjectOfType<AnalyticsTracker>().enemiesKilled++;
-        EnemySpawner es = FindObjectOfType<EnemySpawner>();
-        es.OnEnemyKilled();
+        if(FindObjectOfType<EnemySpawner>() && FindObjectOfType<AnalyticsTracker>()) {
+            GameObject.FindObjectOfType<AnalyticsTracker>().enemiesKilled++;
+            EnemySpawner es = FindObjectOfType<EnemySpawner>();
+            es.OnEnemyKilled();
+        }
     }
 
     void ReturnEnemy()

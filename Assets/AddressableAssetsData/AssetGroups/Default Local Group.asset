@@ -37,8 +37,20 @@ MonoBehaviour:
     m_Address: Assets/Prefabs/Enemies/enemy_4.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: 28864ec40299a5d40ab637e5b578b576
-    m_Address: Assets/CSVs/multipliers.csv
+  - m_GUID: f6f5fcf4d27c8cb4e9af289b29e69b4f
+    m_Address: Assets/CSVs/enemyStats.csv
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 4752ee1d951fb4c45af6f2f7c0e2fc90
+    m_Address: Assets/CSVs/levels.csv
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: a96f4073ffbdb1b469629f505a78799f
+    m_Address: Assets/CSVs/weaponStats.csv
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 8db7bbcab1ab81940944feca8958cfa0
+    m_Address: Assets/CSVs/dialogue.csv
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0

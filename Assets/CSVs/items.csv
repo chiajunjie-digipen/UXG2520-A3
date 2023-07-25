@@ -1,7 +1,0 @@
-item_id,itemName,description,itemEffect_id,itemSprite
-1,Fire Bomb,Does fire damage in an area over time.,1,
-2,Poison Grenade,Does poison damage in an area over time.,2,
-3,Holy Orb,Does holy damage in a large area.,3,
-4,Potion of Strength,Increases your attack damage for some time.,4,
-5,Potion of Immunity,Makes you invulnerable to damage for some time.,5,
-6,Potion of Protection,Deals damage to enemies around you for some time.,6,

@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class HealthPot : MonoBehaviour, ICollectible
 {
-    public int healthToRestore; //shar
+    //public int healthToRestore; //shar
     public void Collect()
     {
-        PlayerStats player = FindObjectOfType<PlayerStats>();
-        player.RestoreHealth(healthToRestore);
+        PlayerStats ps = FindObjectOfType<PlayerStats>();
+        ps.RestoreHealth(float.Parse(FindObjectOfType<MultiplierHandler>().multiplierProperties[ps.currentLevel]["recovery"]));
         Destroy(gameObject);
     }
 }

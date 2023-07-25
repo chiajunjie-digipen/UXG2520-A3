@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class ImmunityPot : MonoBehaviour, ICollectible
 {
-    public float invincibilityDuration; //shar
+    //public float invincibilityDuration; //shar
     public void Collect()
     {
         PlayerStats player = FindObjectOfType<PlayerStats>();
-        player.Invincible(invincibilityDuration);
+        player.Invincible(float.Parse(FindObjectOfType<MultiplierHandler>().multiplierProperties[player.currentLevel]["strengthenDuration"]));
+        //use strengthen duration for invincibility
         Destroy(gameObject);
     }
 }

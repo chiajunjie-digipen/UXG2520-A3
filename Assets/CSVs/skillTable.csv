@@ -1,5 +1,0 @@
-weaponSkill_id,skillName,skillDmg,skillCooldown,skillRange,description,skillSprite
-1,Punch,15,5,1,Your next attack deals more damage,
-2,Slash,25,4,2,Deal damage in a small conal AOE in front of you; inflicts bleed,
-3,Thrust,27,6,3,Deal damage outwards in a rectangular AOE; executes enemies who are below 10% HP,
-4,Spreadshot,20,5,5,Shoot out arrows in a circle around you to slow enemies,

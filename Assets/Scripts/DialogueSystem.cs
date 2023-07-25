@@ -5,6 +5,7 @@ using System.IO;
 using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.AddressableAssets;
 
 public class DialogueSystem : MonoBehaviour
 {
