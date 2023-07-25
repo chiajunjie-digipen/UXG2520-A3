@@ -82,7 +82,7 @@ public class DialogueSystem : MonoBehaviour
     {
         if (dialogueProperties[index]["next_dialogue"] != "-1")
         {
-            index++;
+            index = int.Parse(dialogueProperties[index]["next_dialogue"]);
             textComponent.text = string.Empty;
             characterName.text = dialogueProperties[index]["character_name"];
             StartCoroutine(TypeLine());
