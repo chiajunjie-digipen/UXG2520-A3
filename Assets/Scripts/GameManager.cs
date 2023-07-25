@@ -53,6 +53,7 @@ public class GameManager : MonoBehaviour
                 {
                     isGameOver = true;
                     Time.timeScale = 0f; //stops game
+                    GameObject.FindObjectOfType<PlayerStats>().Kill();
                     Debug.Log("Game over");
                 }
                 break;
