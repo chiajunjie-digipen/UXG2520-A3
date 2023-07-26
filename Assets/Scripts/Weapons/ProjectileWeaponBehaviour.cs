@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ProjectileWeaponBehaviour : MonoBehaviour
+public class ProjectileWeaponBehaviour : MonoBehaviour //shar and jj
 {
     // base script for projectiles //shar
     public WeaponScriptableObj weaponData;

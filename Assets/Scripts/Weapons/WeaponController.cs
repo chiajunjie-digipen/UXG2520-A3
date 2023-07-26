@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 
-public class WeaponController : MonoBehaviour //jj
+public class WeaponController : MonoBehaviour //jj and shar
 {
     [Header("Weapon Stats")]
     public WeaponScriptableObj weaponData;

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "EnemyScriptableObj", menuName = "ScriptableObjs/Enemy")]
-public class EnemyScriptableObj : ScriptableObject
+public class EnemyScriptableObj : ScriptableObject //jj
 {
     //base stats for enemies //jj
     /*[SerializeField]

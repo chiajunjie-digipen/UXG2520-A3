@@ -4,7 +4,7 @@ using UnityEngine;
 using System.IO;
 using TMPro;
 
-public class PlayerStats : MonoBehaviour
+public class PlayerStats : MonoBehaviour //shar and jj
 {
 
     //current stats //shar

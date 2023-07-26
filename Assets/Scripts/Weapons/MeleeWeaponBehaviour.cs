@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MeleeWeaponBehaviour : MonoBehaviour
+public class MeleeWeaponBehaviour : MonoBehaviour //shar and jj
 {
     public WeaponScriptableObj weaponData; //shar
 

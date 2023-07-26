@@ -5,7 +5,7 @@ using System.IO;
 
 public class EnemyStats : MonoBehaviour
 {
-    public EnemyScriptableObj enemyData; //shar
+    public EnemyScriptableObj enemyData; //shar and jj
 
     //current stats
     public float currentMoveSpeed;

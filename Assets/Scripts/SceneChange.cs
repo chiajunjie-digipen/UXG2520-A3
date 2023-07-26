@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneChange : MonoBehaviour
 {
-    // jj
+    //jj
     Button button;
     void Start()
     {
